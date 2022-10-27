@@ -1,0 +1,16 @@
+{
+    "params":
+    {
+        "local_server": "True",
+        "local_uri": "mysql+pymysql://root:pranshu196@localhost/students",
+        "prod_uri": "mysql+pymysql://root:pranshu196@localhost/students",
+        "fb_url": "https://facebook.com/codingthunder",
+        "tw_url": "https://twitter.com/codingthunder",
+        "gh_url": "https://github.com/codingthunder",
+        "blog_name": "The Coding Thunder",
+        "tag_line": "A blog liked by Programmers",
+        "gmail-user": "mohantypranshu07@gmail.com",
+        "gmail-password": "Pranshu#196",
+        "about_text": "Hi my name is pranshu and I create programming tutorials and I am a good boy"
+    }
+}

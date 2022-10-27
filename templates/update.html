@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container my-3">
+    <h3>Add A Student</h3>
+    <form action="/update/{{student.roll}}" method="post" onSubmit="return confirm('Are you sure you wish to update the following?');">
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Student Roll: </label>
+            <input type="text" name="std_roll" class="form-control" id="std_roll" placeholder="Roll No. of the student" value="{{student.roll}}" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Student Name: </label>
+            <input type="text" name="std_name" class="form-control" id="std_name" placeholder="Name of the student" value="{{student.name}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Student Class: </label>
+            <input type="text" name="std_class" class="form-control" id="std_class" placeholder="Class of the student" value="{{student.std}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Student Section: </label>
+            <input type="text" name="std_sec" class="form-control" id="std_sec" placeholder="Section of the student" value="{{student.sec}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Father's Name: </label>
+            <input type="text" name="father_name" class="form-control" id="father_name" placeholder="Name of the student's father" value="{{student.father_name}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Mother's Name: </label>
+            <input type="text" name="mother_name" class="form-control" id="mother_name" placeholder="Name of the student's mother" value="{{student.mother_name}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Address: </label>
+            <input type="text" name="address" class="form-control" id="address" placeholder="Address of the student" value="{{student.address}}">
+        </div>
+        <div class="mb-3">
+            <label for="dob" class="form-label">Student D.O.B: </label>
+            <input type="text" name="dob" class="form-control" id="dob" placeholder="yyyy-dd-mm (Use this formot Strictly, NO SLASH, ONLY DASH)" value="{{student.dob}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Father's Phone No.: </label>
+            <input type="text" name="father_phone_num" class="form-control" id="father_phone_num" placeholder="Phone No. of the student's father" value="{{student.father_phone_num}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Mother's Phone No.: </label>
+            <input type="text" name="mother_phone_num" class="form-control" id="mother_phone_num" placeholder="Phone No. of the student's mother" value="{{student.mother_phone_num}}">
+        </div>
+        <button type="submit" class="btn btn-primary update-btn">Submit</button>
+    </form>
+</div>
+<script src="../static/update.js"></script>
+{% endblock  %}

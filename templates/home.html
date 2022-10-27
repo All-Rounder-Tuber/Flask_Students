@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container my-3">
+  <h3>Please Enter the following fields to get the Student's Details: </h3>
+  <form action="/" method="POST">
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Student Roll</label>
+      <input type="text" name="std_roll" class="form-control" id="std_roll">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Student Class</label>
+      <input type="text" name="std_class" class="form-control" id="std_class">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Student Sec</label>
+      <input type="text" name="std_sec" class="form-control" id="std_sec">
+    </div>
+    <div class="btns">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Fields</th>
+        <th scope="col">Values</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Name: </th>
+        <td>{{student.name}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Roll No.: </th>
+        <td>{{student.roll}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Class and Section: </th>
+        <td>{{student.std}} - {{student.sec}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Father Name: </th>
+        <td>{{student.father_name}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Mother Name: </th>
+        <td>{{student.mother_name}}</td>
+      </tr>
+      <tr>
+        <th scope="row">DOB: </th>
+        <td>{{student.dob}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Address: </th>
+        <td>{{student.address}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Father's Phone No.: </th>
+        <td>{{student.father_phone_num}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Mother's Phone No.: </th>
+        <td>{{student.mother_phone_num}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="btns">
+    <button type="button" class="btn btn-primary update-btn"><a href="/update/{{student.roll}}">Update</a></button>
+    <button type="button" class="btn btn-danger" onclick="return confirm('Are you sure you wish to delete the following?');"><a href="/delete/{{student.roll}}">Delete</a></button>
+  </div>
+</div>
+{% endblock %}
